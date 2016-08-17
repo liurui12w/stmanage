@@ -1,5 +1,5 @@
 
-<table class="table table-striped">
+<table class="table table-striped" style="width:800px">
 
   <tr>
     <td>编号</td>
@@ -11,8 +11,7 @@
         <td><%=ar.id%></td>
         <td><%=ar.dename%></td>
         <td>
-
-          <%#=link_to "撤销",{:controller => 'dapartments', :action => 'destroy', :id => "#{ar.id}"} %>|
+          <%=link_to "删除", {:controller=>:departments,:action=>:destroy, :id=>ar}, :method=>:delete  %>|
           <%=link_to "修改", edit_admin_department_path(ar) %>
         </td>
       </tr>

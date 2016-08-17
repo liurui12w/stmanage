@@ -9,14 +9,15 @@
     <td>操作</td>
   </tr>
 
-  <% @tea.each do|ar| %>
+  <% @teas.each do|ar| %>
       <tr>
         <td><%=ar.id%></td>
         <td><%=ar.tname%></td>
         <td><% if(ar.tsex == 0) %><p>男</p><% end %><% if(ar.tsex == 1) %><p>女</p><% end %></td>
         <td><%=Department.find(ar.tdepartmentNo).dename %></td>
         <td>
-          <%=link_to('a' )%>
+          <%=link_to "删除", {:controller=>:teachers,:action=>:destroy, :id=>ar}, :method=>:delete  %>|
+          <%=link_to "修改", edit_admin_teacher_path(ar) %>
         </td>
       </tr>
   <% end %>

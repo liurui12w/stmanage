@@ -15,7 +15,7 @@ class Admin::DepartmentsController < Admin::BaseController
 
   def edit
     @deps = Department.find(params[:id])
-  
+
   end
 
   def update
@@ -23,7 +23,11 @@ class Admin::DepartmentsController < Admin::BaseController
     @deps.update(dep_params)
     redirect_to :action => 'index'
   end
-
+  def destroy
+    @deps =Department.find(params[:id])
+    @deps.destroy
+    redirect_to :action => 'index'
+  end
 
   def dep_params
     params.require(:department).permit!

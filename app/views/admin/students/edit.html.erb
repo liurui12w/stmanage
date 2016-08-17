@@ -1,0 +1,16 @@
+<%= form_for [:admin, @stus] do |f| %>
+  <table> <p>
+  <tr><td><%=f.label :编号%></td>
+  <td><%= f.text_field :id%></tr>
+  <tr><td><%=f.label :名字%></td>
+  <td><%= f.text_field :name%></tr>
+  <tr><td><%=f.label :年龄%></td>
+  <td><%= f.text_field :age%></tr>
+  <tr><td><%=f.label :性别%></td>
+  <td><%=f.select :sex,[["女",1],["男",0]] %></tr>
+  <tr><td> <%= f.label :系部 %></td>
+  <td><%=f.select :departmentNo, (@dep.collect { |s| [s.dename,s.id] } )%></td></tr>
+    <tr><td> <%=f.submit "提交"%></td></tr>
+  </p>
+  </table>
+<% end -%>

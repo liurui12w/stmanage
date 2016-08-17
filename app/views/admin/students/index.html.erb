@@ -10,15 +10,16 @@
     <td>操作</td>
   </tr>
 
-  <% @stu.each do|ar| %>
+  <% @stus.each do|ar| %>
       <tr>
         <td><%=ar.id%></td>
         <td><%=ar.name%></td>
-        <td><%=ar.sex%></td>
+        <td><%=ar.age%></td>
         <td><% if(ar.sex == 0) %><p>男</p><% end %><% if(ar.sex == 1) %><p>女</p><% end %></td>
         <td><%=Department.find(ar.departmentNo).dename %></td>
         <td>
-          <%=link_to('a' )%>
+          <%=link_to "删除", {:controller=>:students,:action=>:destroy, :id=>ar}, :method=>:delete  %>|
+          <%=link_to "修改", edit_admin_student_path(ar) %>
         </td>
       </tr>
   <% end %>

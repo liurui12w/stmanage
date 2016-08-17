@@ -1,5 +1,5 @@
 
-<%=form_for(@teas,url: {:controller => 'teachers',:action =>'create' },html:{method: :post})do|f| %>
+<%=form_for(@tea,url: {:controller => 'teachers',:action =>'create' },html:{method: :post})do|f| %>
     <p>
       <%= f.label :姓名 %>
       <%= f.text_field :tname, size: 10%>

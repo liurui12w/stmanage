@@ -1,0 +1,14 @@
+<%= form_for [:admin, @teas] do |f| %>
+  <table> <p>
+  <tr><td><%=f.label :编号%></td>
+  <td><%= f.text_field :id%></tr>
+  <tr><td><%=f.label :名字%></td>
+  <td><%= f.text_field :tname%></tr>
+  <tr><td><%=f.label :性别%></td>
+  <td><%=f.select :tsex,[["女",1],["男",0]] %></tr>
+  <tr><td> <%= f.label :系部 %></td>
+  <td><%=f.select :tdepartmentNo, (@dep.collect { |s| [s.dename,s.id] } )%></td></tr>
+    <tr><td> <%=f.submit "提交"%></td></tr>
+  </p>
+  </table>
+<% end -%>
