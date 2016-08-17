@@ -1,0 +1,12 @@
+<%= form_for [:admin, @deps] do |f| %>
+  <table> <p>
+  <tr><td><%=f.label :编号%></td>
+  <td><%= f.text_field :id%></tr>
+  <tr><td> <%= f.label :系部 %></td>
+  <td><%= f.text_field :dename%></td></tr>
+  </p>
+  <p>
+    <tr><td> <%=f.submit "提交"%></td></tr>
+  </p>
+  </table>
+<% end -%>

@@ -1,0 +1,25 @@
+
+<table class="table table-striped">
+
+  <tr>
+    <td>编号</td>
+    <td>名称</td>
+    <td>年龄</td>
+    <td>性别</td>
+    <td>部系</td>
+    <td>操作</td>
+  </tr>
+
+  <% @stu.each do|ar| %>
+      <tr>
+        <td><%=ar.id%></td>
+        <td><%=ar.name%></td>
+        <td><%=ar.sex%></td>
+        <td><% if(ar.sex == 0) %><p>男</p><% end %><% if(ar.sex == 1) %><p>女</p><% end %></td>
+        <td><%=Department.find(ar.departmentNo).dename %></td>
+        <td>
+          <%=link_to('a' )%>
+        </td>
+      </tr>
+  <% end %>
+</table>

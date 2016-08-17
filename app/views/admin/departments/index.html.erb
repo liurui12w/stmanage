@@ -1,0 +1,20 @@
+
+<table class="table table-striped">
+
+  <tr>
+    <td>编号</td>
+    <td>名称</td>
+    <td>操作</td>
+  </tr>
+  <% @deps.each do|ar| %>
+      <tr>
+        <td><%=ar.id%></td>
+        <td><%=ar.dename%></td>
+        <td>
+
+          <%#=link_to "撤销",{:controller => 'dapartments', :action => 'destroy', :id => "#{ar.id}"} %>|
+          <%=link_to "修改", edit_admin_department_path(ar) %>
+        </td>
+      </tr>
+  <% end %>
+</table>

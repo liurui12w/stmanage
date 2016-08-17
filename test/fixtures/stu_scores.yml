@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  stuno: 1
+  kcno: 1
+  score: 1.5
+
+two:
+  stuno: 1
+  kcno: 1
+  score: 1.5

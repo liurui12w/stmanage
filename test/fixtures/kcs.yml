@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  kcname: MyString
+  kcscore: 1.5
+  teacherno: 1
+  rails: MyString
+  g: MyString
+  model: MyString
+  teacher: MyString
+  tname: MyString
+  tsex: 1
+  tdepartmentNo: 1
+
+two:
+  kcname: MyString
+  kcscore: 1.5
+  teacherno: 1
+  rails: MyString
+  g: MyString
+  model: MyString
+  teacher: MyString
+  tname: MyString
+  tsex: 1
+  tdepartmentNo: 1

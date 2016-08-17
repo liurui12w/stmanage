@@ -1,0 +1,70 @@
+<script>
+
+  $(document).ready(function(){
+    $("#employee_sidebar_tree_up").click(function () {
+      if($("#employee_sidebar_tree").is(":visible")==false){
+        $("#employee_sidebar_tree").css("display","block");
+      }else{
+        $("#employee_sidebar_tree").css("display","none");
+      }
+    });
+  });
+
+  $(document).ready(function(){
+    $("#employee_sidebar_tree_down").click(function () {
+      if($("#employee_sidebar_trees").is(":visible")==false){
+        $("#employee_sidebar_trees").css("display","block");
+      }else{
+        $("#employee_sidebar_trees").css("display","none");
+      }
+    });
+  });
+    $(document).ready(function(){
+      $("#branch_sidebar_tree_up").click(function(){
+        if($("#branch_sidebar_tree").is(":visible")==false){
+          $("#branch_sidebar_tree").css("display","block");
+        }else{
+          $("#branch_sidebar_tree").css("display","none");
+        }
+      })
+    })
+  $(document).ready(function(){
+    $("#branch_sidebar_tree_down").click(function(){
+      if($("#branch_sidebar_trees").is(":visible")==false){
+        $("#branch_sidebar_trees").css("display","block");
+      }else{
+        $("#branch_sidebar_trees").css("display","none");
+      }
+    })
+  })
+</script>
+<aside class="main-sidebar" >
+<section class="sidebar">
+<ul class="sidebar-menu">
+  <li><a href='#' class='selected'><i class='fa fa-circle-o'></i>Menu</a></li>
+  <li><a href='#' class='text-aqua' id="branch_sidebar_tree_up"><i class='fa fa-circle-o'></i>学生管理</a></li>
+  <ul id="branch_sidebar_tree" >
+    <li><%= link_to('学生显示' ,{:controller => 'students' ,:action => 'index'} )%></li>
+    <li><%= link_to('新增学生' ,{:controller => 'students' ,:action => 'new'})%></li>
+    <li><%= link_to('教师显示' ,{:controller => 'teachers' ,:action => 'index'})%></li>
+    <li><%= link_to('新增教师' ,{:controller => 'teachers' ,:action => 'new'})%></li>
+    <li><%= link_to('部系显示' ,{:controller => 'departments' ,:action => 'index'})%></li>
+    <li><%= link_to('新增部系' ,{:controller => 'departments' ,:action => 'new'})%></li>
+    <li><a>a</a></li>
+  </ul>
+  <li><a href='#' class='text-aqua'id="employee_sidebar_tree_up"><i class='fa fa-circle-o'></i>Menu</a></li>
+  <ul id="employee_sidebar_tree" >
+    <li><%= link_to('员工显示' )%></li>
+    <li><%=link_to('员工添加')%></li>
+    <li><a>a</a></li>
+    <li><a>a</a></li>
+
+  </ul>
+  <li class="treeview">
+  <a href="#"><i class="fa"></i><span>Tree</span><i class="fa fa-angle-left pull-right"></i></a>
+  <ul class="treeview-menu" style='display: block;'>
+    <li><a href='#' class='text-aqua'><i class='fa fa-circle-o'></i>Menu</a></li>
+  </ul></li>
+</ul>
+</section>
+</aside>

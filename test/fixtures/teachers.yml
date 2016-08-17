@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tname: MyString
+  tsex: 1
+  tdepartmentNo: 1
+
+two:
+  tname: MyString
+  tsex: 1
+  tdepartmentNo: 1
